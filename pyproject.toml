@@ -1,0 +1,16 @@
+[project]
+name = "warriors"
+version = "0.1.0"
+description = "Historical battle simulation engine in C++ with Python experiment tooling"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "cmake>=3.20,<5",
+    "ninja>=1.11,<2",
+]
+
+[tool.uv]
+package = false
