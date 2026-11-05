@@ -2,9 +2,14 @@ cmake_minimum_required(VERSION 3.28)
 
 project(Warriors VERSION 0.1.0 LANGUAGES CXX)
 
-add_executable(warriors src/main.cpp)
+add_executable(warriors
+    src/main.cpp
+    src/agents/basic_agent.cpp
+    src/command/basic_commander.cpp
+)
 target_compile_features(warriors PRIVATE cxx_std_20)
 set_target_properties(warriors PROPERTIES CXX_EXTENSIONS OFF)
+target_include_directories(warriors PRIVATE src)
 
 include(FetchContent)
 FetchContent_Declare(
