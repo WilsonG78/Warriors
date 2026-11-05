@@ -2,7 +2,10 @@
 
 #include <agents/components.h>
 
-
+/**
+ * @brief creates basic agent in registry
+ * @return created entity
+ */
 entt::entity basic_agent(entt::registry &registry)
 {
     const auto entity = registry.create();

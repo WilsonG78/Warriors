@@ -7,7 +7,12 @@
 #include <command/basic_commander.h>
 #include <command/components.h>
 
-
+/**
+ * @brief adds agents to registry
+ * 
+ * currently used to run quick tests,
+ * in the future will be expanded to add agents based on scenario
+ */
 void addAgentsToRegistry(entt::registry &registry)
 {
     create_unit(registry, &basic_commander, &basic_agent, 20);
@@ -16,6 +21,7 @@ void addAgentsToRegistry(entt::registry &registry)
 int main()
 {
     entt::registry registry;
+    float time_step = 0.1; // in seconds
 
     addAgentsToRegistry(registry);
 
