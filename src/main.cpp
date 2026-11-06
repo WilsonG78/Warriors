@@ -7,6 +7,8 @@
 #include <command/basic_commander.h>
 #include <command/components.h>
 
+#include <simulation/simulation.h>
+
 /**
  * @brief adds agents to registry
  * 
@@ -27,6 +29,8 @@ int main()
 
     while(true)
     {
+        runSimulationStep(registry, time_step);
+        
         registry.view<relationToCommander, position>().each([](const auto entity, const auto &relation, const auto &pos) {
             std::cout << "entity " << static_cast<unsigned>(entt::to_integral(entity))
                       << " parent-> "

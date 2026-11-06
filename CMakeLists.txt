@@ -5,6 +5,7 @@ project(Warriors VERSION 0.1.0 LANGUAGES CXX)
 add_executable(warriors
     src/main.cpp
     src/agents/basic_agent.cpp
+    src/simulation/simulation.cpp
     src/command/basic_commander.cpp
 )
 target_compile_features(warriors PRIVATE cxx_std_20)
