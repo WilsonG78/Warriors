@@ -6,6 +6,7 @@ add_executable(warriors
     src/main.cpp
     src/agents/basic_agent.cpp
     src/simulation/simulation.cpp
+    src/movement/spatial_grid.cpp
     src/command/basic_commander.cpp
 )
 target_compile_features(warriors PRIVATE cxx_std_20)

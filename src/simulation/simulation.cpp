@@ -1,6 +1,7 @@
 #include <entt/entt.hpp>
 
 #include <simulation/simulation.h>
+#include <movement/spatial_grid.h>
 #include <agents/components.h>
 
 /**
@@ -47,6 +48,8 @@ void updatePositions(entt::registry &registry, float time_step)
         pos.x = vel.x * time_step;
         pos.y = vel.y * time_step;
     }
+
+    update_grids(registry);
 }
 
 /**

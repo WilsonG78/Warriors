@@ -7,6 +7,8 @@
 #include <command/basic_commander.h>
 #include <command/components.h>
 
+#include <movement/spatial_grid.h>
+
 #include <simulation/simulation.h>
 
 /**
@@ -26,6 +28,7 @@ int main()
     float time_step = 0.1; // in seconds
 
     addAgentsToRegistry(registry);
+    create_grids(registry);
 
     while(true)
     {
