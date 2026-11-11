@@ -15,6 +15,8 @@ entt::entity basic_agent(entt::registry &registry)
     registry.emplace<orientation>(entity, 0.f);
     registry.emplace<size>(entity, 1.f);
     registry.emplace<side>(entity, SIDE0);
+    registry.emplace<perception>(entity, 10.f, 10.f, 10.f);
+    registry.emplace<status>(entity, FINE);
 
     return entity;
 }

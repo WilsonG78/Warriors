@@ -1,6 +1,7 @@
 #include <entt/entt.hpp>
 
 #include <simulation/simulation.h>
+#include <simulation/observation.h>
 #include <movement/spatial_grid.h>
 #include <agents/components.h>
 
@@ -9,7 +10,7 @@
  */
 void createObservations(entt::registry &registry)
 {
-
+    update_observation_for_soldiers(registry);
 }
 
 /**

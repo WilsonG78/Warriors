@@ -27,4 +27,17 @@ enum side
     SIDE1
 };
 
+struct perception
+{
+    float allies_perception_radius;
+    float enemies_perception_radius;
+    // should be larger or equal to enemies_perception_radius
+    float closest_enemy_search_radius;
+};
+
+enum status
+{
+    FINE, DISABLED, PANICKED, RETREATING
+};
+
 #endif

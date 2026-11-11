@@ -5,7 +5,9 @@ project(Warriors VERSION 0.1.0 LANGUAGES CXX)
 add_executable(warriors
     src/main.cpp
     src/agents/basic_agent.cpp
+    src/agents/utils.cpp
     src/simulation/simulation.cpp
+    src/simulation/observation.cpp
     src/movement/spatial_grid.cpp
     src/command/basic_commander.cpp
 )
